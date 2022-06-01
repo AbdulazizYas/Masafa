@@ -2,23 +2,24 @@
 @each $key, $val in $colors {
   
   .text-#{$key}{
-    color: $val;
+    color: $val !important;
   }
 
   .bg-#{$key}{
-    background-color: $val;
+    background-color: $val !important;
   }
 
 
+  @if ($val != black and $val != white){
   // light variations
   @for $i from 1 through 9{
 
     .text-#{$key}-light-#{$i}{
-      color: mix(white, $val, $i * 10);
+      color: mix(white, $val, $i * 10) !important;
     }
   
     .bg-#{$key}-light-#{$i}{
-      background-color: mix(white, $val, $i * 10);
+      background-color: mix(white, $val, $i * 10) !important;
     }
   }
 
@@ -27,11 +28,12 @@
   @for $i from 1 through 9{
 
     .text-#{$key}-dark-#{$i}{
-      color: mix(black, $val, $i * 10);
+      color: mix(black, $val, $i * 10) !important;
     }
   
     .bg-#{$key}-dark-#{$i}{
-      background-color: mix(black, $val, $i * 10);
+      background-color: mix(black, $val, $i * 10) !important;
     }
   }
+}
 }

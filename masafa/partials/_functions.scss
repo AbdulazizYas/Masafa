@@ -7,3 +7,12 @@
 
   @return $lightened;
 }
+
+
+@function breakpoint-infix($bp: "xs"){
+  @if ($bp == "xs"){
+    @return "";
+  }@else{
+    @return "-#{$bp}"
+  }
+}

@@ -1,5 +1,7 @@
 @use "sass:math";
+
 $grid-columns: 12;
+
 $grid-gaps: (
   "0": 0,
   "1": 10px,
@@ -8,16 +10,63 @@ $grid-gaps: (
   "4": 40px,
 );
 
+$container-max-widths: (
+  "sm": 540px,
+  "md": 720px,
+  "lg": 960px,
+  "xl": 1140px,
+  "xxl": 1320px
+);
+
 $flex-values: flex-start, flex-end, space-between, space-around, space-evenly, center;
 
-// base layout classes
-.container{
+// -----base layout classes
+
+// mixin for creating container
+@mixin create-container($gutter: 1.5rem){
+
   width: 100%;
-  max-width: 1200px;
-  padding: 0 20px;
-  margin: 0 auto;
-  box-sizing: border-box;
+  padding-left: calc($gutter * 0.5);
+  padding-right: calc($gutter * 0.5);
+  margin-left: auto;
+  margin-right: auto;
 }
+
+.container-full,
+.container{
+  @include create-container();
+}
+
+// create breakpoints containers
+@each $bp, $max-width in $container-max-widths{
+  .container-#{$bp}{
+    @extend .container-full;
+  }
+
+  @include breakpoint(map-get($breakpoints, $bp)){
+
+    %responsive-container-#{$bp}{
+      max-width: $max-width;
+    }
+
+    $extend-bp: true;
+
+    @each $bp-name, $width in $breakpoints{
+      @if ($extend-bp){
+        .container#{breakpoint-infix($bp-name)}{
+          @extend %responsive-container-#{$bp};
+        }
+
+
+        @if ($bp-name == $bp){
+          $extend-bp: false;
+        }
+      }
+      
+    }
+  }
+}
+
 
 .row{
   display: flex;
@@ -29,6 +78,7 @@ $flex-values: flex-start, flex-end, space-between, space-around, space-evenly, c
   justify-content: center;
   align-items: center;
 }
+
 // generate grid gaps
 @each $k , $v in $grid-gaps{
 
@@ -101,6 +151,16 @@ $flex-values: flex-start, flex-end, space-between, space-around, space-evenly, c
 @include xl{
   @for $i from 1 through $grid-columns{
     .col-#{$i}-xl{
+      box-sizing: border-box;
+      flex-grow: 0;
+      width: math.div($i * 100%, $grid-columns);
+    }
+  }
+}
+
+@include xxl{
+  @for $i from 1 through $grid-columns{
+    .col-#{$i}-xxl{
       box-sizing: border-box;
       flex-grow: 0;
       width: math.div($i * 100%, $grid-columns);

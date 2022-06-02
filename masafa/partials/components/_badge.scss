@@ -3,9 +3,11 @@
 @mixin badge($bd-color: $info){
   border-radius: $base-border-radius * 4;
   padding: math.div($base-padding, 5) $base-padding;
-  font-size: $font-size-sm;
+  font-size: $font-size-xs;
   font-weight: normal;
-  background-color: $bd-color;
+  background-color: lighten($bd-color,25%);
+  font-weight: bold;
+  border: $base-border-thickness*2 solid $bd-color;
 }
 
 .badge{

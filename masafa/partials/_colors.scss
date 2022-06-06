@@ -1,5 +1,5 @@
 
-@each $key, $val in $colors {
+@each $key, $val in map-merge($theme-colors, $palette-colors) {
   
   .text-#{$key}{
     color: $val !important;

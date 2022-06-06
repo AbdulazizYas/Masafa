@@ -21,7 +21,7 @@
   }
 }
 
-@each $key, $val in $colors {
+@each $key, $val in $theme-colors {
   
   .navbar-#{$key}{
     @extend .navbar;

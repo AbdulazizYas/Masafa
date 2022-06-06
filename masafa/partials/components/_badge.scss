@@ -14,7 +14,7 @@
   @include badge;
 }
 
-@each $key, $val in $colors{
+@each $key, $val in map-merge($theme-colors, $palette-colors){
   .badge-#{$key}{
     @include badge($val);
   }

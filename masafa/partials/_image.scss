@@ -1,0 +1,27 @@
+
+
+.img-responsive{
+  max-width: 100%;
+  height: auto;
+}
+
+.img-border{
+  padding: $base-padding*0.5;
+  border-radius: $base-border-radius * .5;
+  background-color: #fff;
+  border: $base-border-thickness solid $gray-300;
+}
+
+.figure {
+  display: inline-block;
+}
+
+.figure-img {
+  margin-bottom: .5rem;
+  line-height: 1;
+}
+
+.figure-caption {
+  //@include font-size($figure-caption-font-size);
+  color: $gray-600;
+}

@@ -6,15 +6,17 @@
   border: 0;
   padding: $base-padding*0.5 $base-padding*2;
   border-radius: $base-border-radius * 0.25;
-
+  color: black;
+  transition: color .2s ease-in-out,background-color .2s ease-in-out, box-shadow .2s ease-in-out;
 }
 
 .btn{
   @include btn;
   background-color: #e5e5e5;
+
 }
 
-@each $key, $val in $colors{
+@each $key, $val in map-merge($theme-colors, $palette-colors){
 
   .btn-#{$key}{
 

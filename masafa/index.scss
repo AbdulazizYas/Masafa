@@ -5,13 +5,21 @@
 
 // base & layout
 
-@import "partials/base";
+@import "partials/reset";
 @import "partials/breakpoints";
 @import "partials/grid";
 
 // colors
 @import "partials/colors";
 
+// content
+@import "partials/image";
+@import "partials/typography";
+@import "partials/tables";
+
+
+//forms
+@import "partials/forms";
 
 // components (button, card, navbar ...etc)
 @import "partials/components/card";

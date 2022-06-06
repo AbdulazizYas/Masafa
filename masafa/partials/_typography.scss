@@ -1,0 +1,104 @@
+
+// Headings
+
+.h1{
+  @extend h1;
+}
+.h2{
+  @extend h2;
+}
+.h3{
+  @extend h3;
+}
+.h4{
+  @extend h4;
+}
+.h5{
+  @extend h5;
+}
+.h6{
+  @extend h6;
+}
+
+.lead{
+  font-size: 1rem * 1.25;
+  font-weight: lighter;
+}
+
+.small{
+  @extend small;
+}
+
+.mark{
+  @extend mark;
+}
+
+
+$display-font-sizes: (
+  1:5rem,
+  2:4.5rem,
+  3:4rem,
+  4:3.5rem,
+  5: 3rem,
+  6: 2.5rem
+);
+
+$display-font-weight: 300;
+$display-line-height: 1.25;
+
+@each $number , $size in $display-font-sizes{
+  .d-#{$number}{
+    font-size: $size;
+    font-weight: $display-font-weight;
+    line-height: $display-line-height;
+  }
+}
+
+
+.text-muted{
+  color: rgba($gray-900, 0.65);
+}
+
+
+//blockqoutes
+
+.qoute-block{
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.qoute-source{
+  margin-bottom: 1rem;
+  color: #6c757d;
+  font-size: .875em;
+
+  &::before{
+    content: "— ";
+  }
+}
+
+// Lists
+
+.list-none{
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline{
+  @extend .list-none;
+
+  .list-inline-item{
+    display: inline-block;
+
+    &:not(:last-child){
+      margin-right: .5rem; //TODO: rtl-concern
+    }
+  }
+}
+
+
+.truncate{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,23 @@
+
+.table{
+  width: 100%;
+  color: #31363c;
+  margin-bottom: 1rem;
+  vertical-align: top;
+  border-color: $base-border-color;
+
+  >:not(caption)>*>*{
+    padding: .5rem;
+    border-bottom-width: $base-border-thickness;
+    background-color: #00000000;
+    
+  }
+
+  > thead{
+    vertical-align: bottom;
+  }
+
+  > tbody{
+    vertical-align: inherit;
+  }
+}

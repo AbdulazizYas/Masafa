@@ -11,7 +11,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: .375rem;
+  border-radius: $base-border-radius * .375;
   transition: box-shadow .2s ease-in-out;
 
 
@@ -48,4 +48,36 @@
 
 .input-label{
   margin-bottom: .5rem;
+}
+
+.form-select{
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  -moz-padding-start: calc(0.75rem - 3px);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #232129;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 1 15 12'><path fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='1' d='m2 5 6 6 6-6'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right .75rem center;
+  background-size: 16px 12px;
+  border: 1px solid #c4d0db;
+  border-radius: $base-border-radius * .375;
+  appearance: none;
+
+  &:focus{
+    outline: 0;
+  }
+
+  &[multiple],
+  &[size]{
+    background-image: none;
+  }
+
+  &[disabled]{
+    background-color: $gray-200;
+    border-color: $gray-400;
+  }
 }

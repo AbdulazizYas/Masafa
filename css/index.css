@@ -3794,6 +3794,10 @@ progress {
   border-radius: 6px;
   transition: box-shadow 0.2s ease-in-out;
 }
+.form-input[disabled] {
+  background-color: #e9ecef;
+  border-color: #ced4da;
+}
 .form-input[type=file] {
   overflow: hidden;
 }
@@ -3846,6 +3850,61 @@ progress {
 .form-select[disabled] {
   background-color: #e9ecef;
   border-color: #ced4da;
+}
+
+.form-check {
+  display: block;
+  min-height: 1.5rem;
+  padding-left: 1.65em;
+  margin-bottom: 0.15rem;
+}
+.form-check .form-check-input {
+  float: left;
+  margin-left: -1.5rem;
+}
+
+.form-check-input {
+  background-color: #fff;
+  width: 1.25em;
+  height: 1.25em;
+  margin-top: 0.25em;
+  vertical-align: top;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 1px solid #adb5bd;
+  appearance: none;
+}
+.form-check-input[type=checkbox] {
+  border-radius: 0.25em;
+}
+.form-check-input[type=radio] {
+  border-radius: 50%;
+}
+.form-check-input:active {
+  filter: brightness(90%);
+}
+.form-check-input:focus {
+  outline: 0;
+}
+.form-check-input:checked {
+  background-color: #2876f2;
+  border-color: #2876f2;
+}
+.form-check-input:checked[type=checkbox] {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m4 11 4 5 10-12'/></svg>");
+}
+.form-check-input:checked[type=radio] {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='white'/></svg>");
+}
+.form-check-input[disabled] {
+  pointer-events: none;
+  background-color: #dee2e6;
+}
+
+.form-check-label {
+  cursor: pointer;
+  color: #343a40;
 }
 
 .card {

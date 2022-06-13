@@ -1,12 +1,24 @@
-
+$end-of-theme: false;
 @each $key, $val in map-merge($theme-colors, $palette-colors) {
   
+
+
   .text-#{$key}{
     color: $val !important;
   }
 
   .bg-#{$key}{
     background-color: $val !important;
+  }
+
+  @if ($end-of-theme == false){
+  .border-#{$key}{
+    border-color: $val !important;
+  }
+  }
+
+  @if ($key == "dark"){
+    $end-of-theme: true;
   }
 
 

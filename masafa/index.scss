@@ -1,32 +1,38 @@
+// mixins (General)
+@import "mixins";
+
 // variables & functions
-@import "partials/functions";
-@import "partials/variables";
+@import "functions";
+@import "variables";
 
 
 // base & layout
 
-@import "partials/reset";
-@import "partials/breakpoints";
-@import "partials/grid";
+@import "reset";
+@import "breakpoints";
+@import "grid";
 
 // colors
-@import "partials/colors";
+@import "colors";
 
 // content
-@import "partials/image";
-@import "partials/typography";
-@import "partials/tables";
+@import "image";
+@import "typography";
+@import "tables";
 
 
 //forms
-@import "partials/forms";
+@import "forms";
 
 // components (button, card, navbar ...etc)
-@import "partials/components/card";
-@import "partials/components/button";
-@import "partials/components/navbar";
-@import "partials/components/badge";
+@import "components/card";
+@import "components/button";
+@import "components/navbar";
+@import "components/badge";
 
+
+// Helpers (position, special minor styles, etc)
+@import "helpers";
 
 // utilities (margin, padding, opacity ..etc)
-@import "partials/utilities";
+@import "utilities";

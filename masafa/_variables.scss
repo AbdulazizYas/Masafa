@@ -4,7 +4,7 @@ $secondary: #95b8bd !default;
 $ok:        #0dcd19 !default;
 $info:      #0dcdbd !default;
 $error:     #f23528 !default;
-$light:       #e2e2e2 !default;
+$light:       #f5f5f5 !default;
 $dark:        #202020 !default;
 
 $theme-colors: (
@@ -145,4 +145,11 @@ $position-values: (
   50:50%,
   75:75%,
   100:100%
+);
+
+$shadows: (
+  none:none,
+  small:0 .125rem .25rem rgba($black, .075),
+  medium: 0 .5rem 1rem rgba($black, .15),
+  high: 0 1rem 3rem rgba($black, .175) 
 );

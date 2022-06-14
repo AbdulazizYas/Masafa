@@ -274,6 +274,10 @@ $utilities: ( "padding": (
   "prefix": "right",
   "values": $position-values
 ),
+"box-shadow": (
+  "prefix": "raise",
+  "values": $shadows
+),
 );
 
 

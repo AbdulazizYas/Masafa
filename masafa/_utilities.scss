@@ -248,6 +248,32 @@ $utilities: ( "padding": (
     hidden:hidden
   )
 ),
+"position": (
+  "prefix": "pos",
+  "values": (
+    relative:relative,
+    absolute:absolute,
+    static:static,
+    sticky:sticky,
+    fixed:fixed
+  )
+),
+"top":(
+  "prefix": "top",
+  "values": $position-values
+),
+"bottom":(
+  "prefix": "bottom",
+  "values": $position-values
+),
+"left":(
+  "prefix": "left",
+  "values": $position-values
+),
+"right":(
+  "prefix": "right",
+  "values": $position-values
+),
 );
 
 

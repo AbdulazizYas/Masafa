@@ -278,6 +278,30 @@ $utilities: ( "padding": (
   "prefix": "raise",
   "values": $shadows
 ),
+"width": (
+  "prefix": "w",
+  "values": $sizing-values,
+),
+"max-width": (
+  "prefix": "mx-w",
+  "values": $sizing-values,
+),
+"min-width": (
+  "prefix": "mn-w",
+  "values": $sizing-values,
+),
+"height": (
+  "prefix": "h",
+  "values": $sizing-values,
+),
+"max-height": (
+  "prefix": "mx-h",
+  "values": $sizing-values,
+),
+"min-height": (
+  "prefix": "mn-h",
+  "values": $sizing-values,
+),
 );
 
 

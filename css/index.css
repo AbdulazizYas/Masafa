@@ -5486,3 +5486,147 @@ progress {
 .raise-high {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 }
+
+.w-0 {
+  width: 0;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.mx-w-0 {
+  max-width: 0;
+}
+
+.mx-w-25 {
+  max-width: 25%;
+}
+
+.mx-w-50 {
+  max-width: 50%;
+}
+
+.mx-w-75 {
+  max-width: 75%;
+}
+
+.mx-w-100 {
+  max-width: 100%;
+}
+
+.mx-w-auto {
+  max-width: auto;
+}
+
+.mn-w-0 {
+  min-width: 0;
+}
+
+.mn-w-25 {
+  min-width: 25%;
+}
+
+.mn-w-50 {
+  min-width: 50%;
+}
+
+.mn-w-75 {
+  min-width: 75%;
+}
+
+.mn-w-100 {
+  min-width: 100%;
+}
+
+.mn-w-auto {
+  min-width: auto;
+}
+
+.h-0 {
+  height: 0;
+}
+
+.h-25 {
+  height: 25%;
+}
+
+.h-50 {
+  height: 50%;
+}
+
+.h-75 {
+  height: 75%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.h-auto {
+  height: auto;
+}
+
+.mx-h-0 {
+  max-height: 0;
+}
+
+.mx-h-25 {
+  max-height: 25%;
+}
+
+.mx-h-50 {
+  max-height: 50%;
+}
+
+.mx-h-75 {
+  max-height: 75%;
+}
+
+.mx-h-100 {
+  max-height: 100%;
+}
+
+.mx-h-auto {
+  max-height: auto;
+}
+
+.mn-h-0 {
+  min-height: 0;
+}
+
+.mn-h-25 {
+  min-height: 25%;
+}
+
+.mn-h-50 {
+  min-height: 50%;
+}
+
+.mn-h-75 {
+  min-height: 75%;
+}
+
+.mn-h-100 {
+  min-height: 100%;
+}
+
+.mn-h-auto {
+  min-height: auto;
+}

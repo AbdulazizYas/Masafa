@@ -153,3 +153,12 @@ $shadows: (
   medium: 0 .5rem 1rem rgba($black, .15),
   high: 0 1rem 3rem rgba($black, .175) 
 );
+
+$sizing-values: (
+  0:0,
+  25:25%,
+  50:50%,
+  75:75%,
+  100:100%,
+  auto:auto
+);

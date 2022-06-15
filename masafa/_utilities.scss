@@ -157,6 +157,17 @@ $utilities: ( "padding": (
     "xxl": $font-size-xxl
   )
 ),
+"font-weight":(
+  prefix: "font",
+  values: (
+    bold: 800,
+    bolder: bolder,
+    semibold: 600,
+    normal: 400,
+    light:300,
+    lighter:lighter,
+  )
+),
 "border-radius": (
   "prefix": "smooth",
   "values": (
@@ -302,6 +313,22 @@ $utilities: ( "padding": (
   "prefix": "mn-h",
   "values": $sizing-values,
 ),
+"text-align": (
+  prefix: "text",
+  values:(
+    center:center,
+    right:right,
+    left:left
+  )
+),
+text-decoration: (
+  prefix: "text",
+  values: (
+    underline: underline,
+    line-through:line-through,
+    none:none,
+  ),
+),
 );
 
 
@@ -322,6 +349,14 @@ $utilities: ( "padding": (
       }
     }
   }
+}
+
+// other utilities
+.visible{
+  visibility: visible;
+}
+.invisible{
+  visibility: hidden;
 }
 
 

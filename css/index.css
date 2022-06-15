@@ -5187,6 +5187,30 @@ progress {
   font-size: 1.75rem;
 }
 
+.font-bold {
+  font-weight: 800;
+}
+
+.font-bolder {
+  font-weight: bolder;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-lighter {
+  font-weight: lighter;
+}
+
 .smooth {
   border-radius: 8px;
 }
@@ -5629,4 +5653,36 @@ progress {
 
 .mn-h-auto {
   min-height: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-line-through {
+  text-decoration: line-through;
+}
+
+.text-none {
+  text-decoration: none;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
 }

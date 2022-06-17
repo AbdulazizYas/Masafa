@@ -2,23 +2,42 @@
 
 .card{
   display: block;
-  padding: $base-padding;
   border: math.div($base-border-thickness,2) solid #ddd;
   box-shadow: $base-box-shadow;
 
+  .card-header{
+    padding: $base-padding;
+    background-color: #00000011;
 
-  .card-title{
-    font-size: $font-size-lg;
-    font-weight: bold;
-    padding-bottom: $base-padding;
   }
 
+  .card-img{
+    width: 100%;
+  }
   .card-body{
-    font-size: $base-font-size;
 
+    padding: $base-padding;
 
-    a{
-      text-decoration: underline;
+    .card-title{
+      font-size: $font-size-lg;
+      font-weight: bold;
+      padding-bottom: $base-padding;
     }
+    .card-content{
+      font-size: $base-font-size;
+    }
+
+
+    .card-link + .card-link{
+      margin-left: $base-margin;
+    }
+
+    
   }
+
+  .card-footer{
+    @extend .card-header;
+  }
+
+
 }

@@ -1,21 +1,14 @@
 @use "sass:math";
 
-@mixin badge($bd-color: $info){
-  border-radius: $base-border-radius * 4;
+@mixin badge{
+  border-radius: $base-border-radius * 0.25;
   padding: math.div($base-padding, 5) $base-padding;
-  font-size: $font-size-xs;
-  font-weight: normal;
-  background-color: lighten($bd-color,25%);
-  font-weight: bold;
-  border: $base-border-thickness*2 solid $bd-color;
+  font-size: .5em;
+  font-weight: 700;
+  color: white;
+  box-shadow: $base-box-shadow
 }
 
 .badge{
   @include badge;
-}
-
-@each $key, $val in map-merge($theme-colors, $palette-colors){
-  .badge-#{$key}{
-    @include badge($val);
-  }
 }

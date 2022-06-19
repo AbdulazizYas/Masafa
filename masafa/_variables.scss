@@ -82,6 +82,8 @@ $palette-colors: (
 $enable-smooth-scroll:        true !default;
 $enable-grid-classes:         true !default;
 $enable-container-classes:    true !default;
+$enable-complement-button:    true !default;
+$enable-bg-color-variation:   true !default;
 
 
 // prefix for root CSS variables
@@ -102,8 +104,13 @@ $anchor-decoration: underline !default;
 $anchor-hover-color:                    shift-color($anchor-color, 20%) !default;
 
 
+// Button
+$button-font-weight:     500 !default;
+
 //=======================//
 
+// helper variables
+$disabled-opacity:       .5 !default;
 
 // Grid variables
 $grid-gap-width:    1.5rem !default;
@@ -137,6 +144,12 @@ $font-size-xxl : $base-font-size * 1.75 !default;
 $form-select-indicator-color:   $dark !default;
 
 $form-select-indicator:   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>") !default;
+
+
+
+// For typography
+$muted-opacity: 0.35;
+
 
 
 // For utilities

@@ -3908,7 +3908,7 @@ progress {
 }
 
 .text-muted {
-  color: rgba(33, 37, 41, 0.65);
+  color: rgba(0, 0, 0, 0.35);
 }
 
 .qoute-block {
@@ -4117,7 +4117,12 @@ progress {
 .card .card-body .card-link + .card-link {
   margin-left: 0.75rem;
 }
-.btn, .btn-complement-white, .btn-outline-white, .btn-white, .btn-complement-black, .btn-outline-black, .btn-black, .btn-complement-gray, .btn-outline-gray, .btn-gray, .btn-complement-purple, .btn-outline-purple, .btn-purple, .btn-complement-orange, .btn-outline-orange, .btn-orange, .btn-complement-green, .btn-outline-green, .btn-green, .btn-complement-yellow, .btn-outline-yellow, .btn-yellow, .btn-complement-red, .btn-outline-red, .btn-red, .btn-complement-cyan, .btn-outline-cyan, .btn-cyan, .btn-complement-teal, .btn-outline-teal, .btn-teal, .btn-complement-pink, .btn-outline-pink, .btn-pink, .btn-complement-indigo, .btn-outline-indigo, .btn-indigo, .btn-complement-blue, .btn-outline-blue, .btn-blue, .btn-complement-dark, .btn-outline-dark, .btn-dark, .btn-complement-light, .btn-outline-light, .btn-light, .btn-complement-warning, .btn-outline-warning, .btn-warning, .btn-complement-error, .btn-outline-error, .btn-error, .btn-complement-info, .btn-outline-info, .btn-info, .btn-complement-ok, .btn-outline-ok, .btn-ok, .btn-complement-secondary, .btn-outline-secondary, .btn-secondary, .btn-complement-primary, .btn-outline-primary, .btn-primary {
+.btn:active, .btn:focus {
+  outline: none;
+  box-shadow: 0 0.45rem 0.45rem rgba(0, 0, 0, 0.125);
+}
+
+.btn {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
@@ -4125,8 +4130,18 @@ progress {
   padding: 0.375rem 1.5rem;
   border-radius: 4px;
   color: black;
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   background-color: #e5e5e5;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.btn:disabled, .btn [disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.btn-full {
+  display: block;
+  width: 100%;
 }
 
 .btn-primary {

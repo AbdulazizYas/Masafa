@@ -1,32 +1,50 @@
 %flex_layout{
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 .navbar{
-  @extend %flex_layout;
-
   padding: $base-padding $base-padding *2;
   box-shadow: $base-box-shadow;
 
-  .site-title{
+  .nav-label{
     font-size: $font-size-lg;
+    margin-right: $base-margin;
+    margin-bottom: 0
   }
 
   .container{
     @extend %flex_layout;
+
+    .nav-links{
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 0;
+
+      a {
+        text-decoration: none;
+      }
+      > li.nav-link:not(:last-child){
+        margin-right: $base-margin * 2;
+      }
+    }
   }
 }
 
 @each $key, $val in $theme-colors {
   
   .navbar-#{$key}{
-    @extend .navbar;
     background-color: $val;
-    color: white;
+    @if ($key != "warning" and $key != "light"){
+     color: $white;
+    } @else{
+      color: $black;
+    }
   }
 
 }

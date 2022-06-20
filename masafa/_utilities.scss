@@ -214,6 +214,17 @@ $utilities: ( "padding": (
     "around": space-around,
   )
 ),
+"justify-self": (
+  "prefix": "justify-self",
+  "values": (
+    "center": center,
+    "end": flex-end,
+    "start": flex-start,
+    "between": space-between,
+    "evenly": space-evenly,
+    "around": space-around,
+  )
+),
 "align-items": (
   "prefix": "align",
   "values": (

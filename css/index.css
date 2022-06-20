@@ -4732,21 +4732,37 @@ progress {
   background-color: white;
 }
 
-.navbar .container, .navbar-dark .container, .navbar-light .container, .navbar-warning .container, .navbar-error .container, .navbar-info .container, .navbar-ok .container, .navbar-secondary .container, .navbar-primary .container, .navbar, .navbar-dark, .navbar-light, .navbar-warning, .navbar-error, .navbar-info, .navbar-ok, .navbar-secondary, .navbar-primary {
+.navbar .container {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
-.navbar, .navbar-dark, .navbar-light, .navbar-warning, .navbar-error, .navbar-info, .navbar-ok, .navbar-secondary, .navbar-primary {
+.navbar {
   padding: 0.75rem 1.5rem;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
-.navbar .site-title, .navbar-dark .site-title, .navbar-light .site-title, .navbar-warning .site-title, .navbar-error .site-title, .navbar-info .site-title, .navbar-ok .site-title, .navbar-secondary .site-title, .navbar-primary .site-title {
+.navbar .nav-label {
   font-size: 1.25rem;
+  margin-right: 0.75rem;
+  margin-bottom: 0;
 }
+.navbar .container .nav-links {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+}
+.navbar .container .nav-links a {
+  text-decoration: none;
+}
+.navbar .container .nav-links > li.nav-link:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
 .navbar-primary {
   background-color: #2876f2;
   color: white;
@@ -4774,12 +4790,12 @@ progress {
 
 .navbar-warning {
   background-color: #ffbf00;
-  color: white;
+  color: black;
 }
 
 .navbar-light {
   background-color: #f5f5f5;
-  color: white;
+  color: black;
 }
 
 .navbar-dark {
@@ -5324,6 +5340,30 @@ progress {
 
 .justify-around {
   justify-content: space-around;
+}
+
+.justify-self-center {
+  justify-self: center;
+}
+
+.justify-self-end {
+  justify-self: flex-end;
+}
+
+.justify-self-start {
+  justify-self: flex-start;
+}
+
+.justify-self-between {
+  justify-self: space-between;
+}
+
+.justify-self-evenly {
+  justify-self: space-evenly;
+}
+
+.justify-self-around {
+  justify-self: space-around;
 }
 
 .align-center {

@@ -1,0 +1,16 @@
+
+@each $color, $val in $theme-colors{
+
+  .alert-#{$color}{
+    background-color: lighten($val, 30%);
+    color: darken($val, 30%);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 .2rem .5rem rgba(darken($val, 20%),.18);
+  }
+
+  .alert-link{
+    color: rgba(0,0,0,.4);
+    font-weight: 900;
+  }
+}

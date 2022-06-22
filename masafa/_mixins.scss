@@ -5,3 +5,9 @@
   top: 0;
   bottom: 0;
 }
+
+@mixin form-disabled{
+  background-color: $gray-500;
+    box-shadow: none;
+    opacity: $disabled-opacity + ($disabled-opacity * .25);
+}

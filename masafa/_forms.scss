@@ -18,9 +18,7 @@
 
   
   &[disabled]{
-    background-color: $gray-500;
-    box-shadow: none;
-    opacity: $disabled-opacity + ($disabled-opacity * .25);
+    @include form-disabled;
   }
 
   &[type="file"]{
@@ -100,9 +98,7 @@
   }
 
   &[disabled]{
-    background-color: $gray-500;
-    box-shadow: none;
-    opacity: $disabled-opacity + ($disabled-opacity * .25);
+    @include form-disabled;
   }
 }
 
@@ -147,7 +143,7 @@
   }
 
   &:focus {
-    //border-color: $form-check-input-focus-border;
+    
     outline: 0;
   }
 
@@ -155,7 +151,7 @@
     background-color: $form-theme-color;
 
     &[type="checkbox"] {
-        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m4 11 4 5 10-12'/></svg>");
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='white' stroke-linecap='path' stroke-linejoin='path' stroke-width='2' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
     }
 
     &[type="radio"] {
@@ -164,8 +160,7 @@
   }
 
   &[disabled]{
-    pointer-events: none;
-    background-color: $gray-300;
+    @include form-disabled;
   }
 }
 

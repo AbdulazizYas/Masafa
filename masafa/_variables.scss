@@ -138,10 +138,11 @@ $font-size-xl : $base-font-size * 1.5 !default;
 $font-size-xxl : $base-font-size * 1.75 !default;
 
 
-// Forms (Select)
-
-
-$form-select-indicator-color:   $dark !default;
+// Forms
+$form-border-radius:            $base-border-radius *.25  !default;
+$form-theme-color:              $secondary                !default;
+$form-select-indicator-color:   $dark                     !default;
+$form-mixing-color-percent:     87.5                      !default;
 
 $form-select-indicator:   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>") !default;
 

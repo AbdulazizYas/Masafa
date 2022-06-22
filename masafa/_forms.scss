@@ -1,29 +1,37 @@
 .form-input{
   display: block;
   width: 100%;
-  padding: .375rem .75rem;
+  padding: .75rem 1.5rem;
   font-size: 1rem;
   line-height: 1.5;
-  color: #232129;
-  background-color: #fff;
+  color: mix($black,$form-theme-color,$form-mixing-color-percent *0.2941);
+  background-color: mix($white,$form-theme-color,$form-mixing-color-percent);//darken($gray-100,2%);
+  border: none;
+  border-radius: $form-border-radius;
+  box-shadow: $base-box-shadow;
   background-clip: padding-box;
-  border: 1px solid #c4d0db;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: $base-border-radius * .375;
   transition: box-shadow .2s ease-in-out;
 
 
   
   &[disabled]{
-    background-color: $gray-200;
-    border-color: $gray-400;
+    background-color: $gray-500;
+    box-shadow: none;
+    opacity: $disabled-opacity + ($disabled-opacity * .25);
   }
 
   &[type="file"]{
     overflow: hidden;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
 
+    &:focus{
+      box-shadow: none;
+    }
     &:not(:disabled):not([readonly]){
       cursor: pointer;
     }
@@ -32,20 +40,28 @@
   
   &::-webkit-file-upload-button,
   &::file-selector-button{
-    margin: -12px -21px;
-    padding: 12px 21px;
-    margin-inline-end: 21px;
-    border-width: 0;
-    border-radius: 2rem;
-    /* background-color: darkgrey; */
-    border-inline-end-width: 1px;
-    border-color: inherit;
+    // margin: -12px -21px;
+    // padding: 12px 21px;
+    // margin-inline-end: 21px;
+    // border-width: 0;
+    // border-radius: 2rem;
+    // /* background-color: darkgrey; */
+    // border-inline-end-width: 1px;
+    // border-color: inherit;
     pointer-events: none;
+    background-color: $form-theme-color;
+    box-shadow: $base-box-shadow;
+    margin-right: $base-margin*2;
+    border: none;
+    border-radius: $form-border-radius;
+    padding: $base-padding $base-padding*2;
+    color: $white;
+
   }
 
   &:focus{
-    outline: 0;
-    box-shadow: 0 0 8px -3px rgba(0, 0, 0, .15) inset ;
+    outline: none;
+    box-shadow: 0 0 8px -2px rgba($gray-800, .2);
   }
 
 
@@ -58,18 +74,20 @@
 .form-select{
   display: block;
   width: 100%;
-  padding: .375rem .75rem;
+  padding: .75rem 1.5rem;
   -moz-padding-start: calc(0.75rem - 3px);
   font-size: 1rem;
   line-height: 1.5;
-  color: #232129;
-  background-color: #fff;
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 1 15 12'><path fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='1' d='m2 5 6 6 6-6'/></svg>");
+  color: mix($black,$form-theme-color,$form-mixing-color-percent *0.2941);
+  background-color: mix($white,$form-theme-color,$form-mixing-color-percent);
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 1 15 12'><path fill='none' stroke='#{rgba($form-theme-color,.99)}' stroke-linecap='round' stroke-linejoin='round' stroke-width='1' d='m2 5 6 6 6-6'/></svg>");
   background-repeat: no-repeat;
   background-position: right .75rem center;
   background-size: 16px 12px;
-  border: 1px solid #c4d0db;
-  border-radius: $base-border-radius * .375;
+  box-shadow: $base-box-shadow;
+  cursor: pointer;
+  border: none;
+  border-radius: $form-border-radius;
   appearance: none;
 
   &:focus{
@@ -82,8 +100,9 @@
   }
 
   &[disabled]{
-    background-color: $gray-200;
-    border-color: $gray-400;
+    background-color: $gray-500;
+    box-shadow: none;
+    opacity: $disabled-opacity + ($disabled-opacity * .25);
   }
 }
 
@@ -102,7 +121,7 @@
 }
 
 .form-check-input{
-  background-color: #fff;
+  background-color: mix($white,$form-theme-color,$form-mixing-color-percent);
   width: 1.25em;
   height: 1.25em;
   margin-top: 0.25em;
@@ -110,12 +129,12 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  border: 1px solid $gray-500;
+  box-shadow: 0 0.15rem .25rem rgba(0,0,0,.2);
   appearance: none;
   
 
   &[type='checkbox']{
-    border-radius: .25em;
+    border-radius: $form-border-radius * .5;
   }
 
   &[type='radio']{
@@ -133,8 +152,7 @@
   }
 
   &:checked {
-    background-color: $primary;
-    border-color: $primary;
+    background-color: $form-theme-color;
 
     &[type="checkbox"] {
         background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m4 11 4 5 10-12'/></svg>");
@@ -153,5 +171,5 @@
 
 .form-check-label{
   cursor: pointer;
-  color: $gray-800;
+  color: mix($black,$form-theme-color,$form-mixing-color-percent *0.2941);
 }

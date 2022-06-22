@@ -3965,43 +3965,50 @@ progress {
 .form-input {
   display: block;
   width: 100%;
-  padding: 0.375rem 0.75rem;
+  padding: 0.75rem 1.5rem;
   font-size: 1rem;
   line-height: 1.5;
-  color: #232129;
-  background-color: #fff;
+  color: #6f898c;
+  background-color: #f2f6f7;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
   background-clip: padding-box;
-  border: 1px solid #c4d0db;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 6px;
   transition: box-shadow 0.2s ease-in-out;
 }
 .form-input[disabled] {
-  background-color: #e9ecef;
-  border-color: #ced4da;
+  background-color: #adb5bd;
+  box-shadow: none;
+  opacity: 0.625;
 }
 .form-input[type=file] {
   overflow: hidden;
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+.form-input[type=file]:focus {
+  box-shadow: none;
 }
 .form-input[type=file]:not(:disabled):not([readonly]) {
   cursor: pointer;
 }
 .form-input::-webkit-file-upload-button, .form-input::file-selector-button {
-  margin: -12px -21px;
-  padding: 12px 21px;
-  margin-inline-end: 21px;
-  border-width: 0;
-  border-radius: 2rem;
-  /* background-color: darkgrey; */
-  border-inline-end-width: 1px;
-  border-color: inherit;
   pointer-events: none;
+  background-color: #95b8bd;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  margin-right: 1.5rem;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  color: white;
 }
 .form-input:focus {
-  outline: 0;
-  box-shadow: 0 0 8px -3px rgba(0, 0, 0, 0.15) inset;
+  outline: none;
+  box-shadow: 0 0 8px -2px rgba(52, 58, 64, 0.2);
 }
 
 .input-label {
@@ -4011,18 +4018,20 @@ progress {
 .form-select {
   display: block;
   width: 100%;
-  padding: 0.375rem 0.75rem;
+  padding: 0.75rem 1.5rem;
   -moz-padding-start: calc(0.75rem - 3px);
   font-size: 1rem;
   line-height: 1.5;
-  color: #232129;
-  background-color: #fff;
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 1 15 12'><path fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='1' d='m2 5 6 6 6-6'/></svg>");
+  color: #6f898c;
+  background-color: #f2f6f7;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 1 15 12'><path fill='none' stroke='rgba(149, 184, 189, 0.99)' stroke-linecap='round' stroke-linejoin='round' stroke-width='1' d='m2 5 6 6 6-6'/></svg>");
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   background-size: 16px 12px;
-  border: 1px solid #c4d0db;
-  border-radius: 6px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
   appearance: none;
 }
 .form-select:focus {
@@ -4032,8 +4041,9 @@ progress {
   background-image: none;
 }
 .form-select[disabled] {
-  background-color: #e9ecef;
-  border-color: #ced4da;
+  background-color: #adb5bd;
+  box-shadow: none;
+  opacity: 0.625;
 }
 
 .form-check {
@@ -4048,7 +4058,7 @@ progress {
 }
 
 .form-check-input {
-  background-color: #fff;
+  background-color: #f2f6f7;
   width: 1.25em;
   height: 1.25em;
   margin-top: 0.25em;
@@ -4056,11 +4066,11 @@ progress {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  border: 1px solid #adb5bd;
+  box-shadow: 0 0.15rem 0.25rem rgba(0, 0, 0, 0.2);
   appearance: none;
 }
 .form-check-input[type=checkbox] {
-  border-radius: 0.25em;
+  border-radius: 2px;
 }
 .form-check-input[type=radio] {
   border-radius: 50%;
@@ -4072,8 +4082,7 @@ progress {
   outline: 0;
 }
 .form-check-input:checked {
-  background-color: #2876f2;
-  border-color: #2876f2;
+  background-color: #95b8bd;
 }
 .form-check-input:checked[type=checkbox] {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m4 11 4 5 10-12'/></svg>");
@@ -4088,7 +4097,7 @@ progress {
 
 .form-check-label {
   cursor: pointer;
-  color: #343a40;
+  color: #6f898c;
 }
 
 .card {

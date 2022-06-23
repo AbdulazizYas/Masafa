@@ -17,7 +17,7 @@ $theme-colors: (
   "warning": $warning,
   "light": $light,
   "dark": $dark,
-);
+) !default;
 
 
 
@@ -43,7 +43,7 @@ $gray-colors: (
   "gray-700": $gray-700,
   "gray-800": $gray-800,
   "gray-900": $gray-900,
-);
+) !default;
 
 
 
@@ -76,7 +76,7 @@ $palette-colors: (
   "gray": $gray,
   "black": $black,
   "white": $white,
-);
+) !default;
 
 // global variables for enabling features
 $enable-smooth-scroll:        true !default;
@@ -113,7 +113,31 @@ $button-font-weight:     500 !default;
 $disabled-opacity:       .5 !default;
 
 // Grid variables
-$grid-gap-width:    1.5rem !default;
+$breakpoints: (
+  "xs": 0,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px
+) !default;
+$grid-columns: 12 !default;
+
+$grid-gaps: (
+  "0": 0,
+  "1": 10px,
+  "2": 20px,
+  "3": 30px,
+  "4": 40px,
+)!default;
+
+$container-max-widths: (
+  "sm": 540px,
+  "md": 720px,
+  "lg": 960px,
+  "xl": 1140px,
+  "xxl": 1320px
+) !default;
 
 // spacing
 $base-padding: 0.75rem !default;
@@ -149,8 +173,18 @@ $form-select-indicator:   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/
 
 
 // For typography
-$muted-opacity: 0.35;
+$muted-opacity: 0.35     !default;
+$display-font-sizes: (
+  1:5rem,
+  2:4.5rem,
+  3:4rem,
+  4:3.5rem,
+  5: 3rem,
+  6: 2.5rem
+)    !default;
 
+$display-font-weight: 300  !default;
+$display-line-height: 1.25  !default;
 
 
 // For utilities
@@ -161,14 +195,14 @@ $position-values: (
   50:50%,
   75:75%,
   100:100%
-);
+)  !default;
 
 $shadows: (
   none:none,
   small:0 .125rem .25rem rgba($black, .075),
   medium: 0 .5rem 1rem rgba($black, .15),
   high: 0 1rem 3rem rgba($black, .175) 
-);
+)  !default;
 
 $sizing-values: (
   0:0,
@@ -177,4 +211,4 @@ $sizing-values: (
   75:75%,
   100:100%,
   auto:auto
-);
+) !default;

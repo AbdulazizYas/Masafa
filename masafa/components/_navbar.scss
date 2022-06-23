@@ -1,10 +1,24 @@
-%flex_layout{
+%nav-container{
   width: 100%;
   display: flex;
   justify-content: start;
   align-items: center;
   box-sizing: border-box;
   flex-wrap: wrap;
+
+  .nav-links{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+
+    a {
+      text-decoration: none;
+    }
+    > li.nav-link:not(:last-child){
+      margin-right: $base-margin * 2;
+    }
+  }
 }
 
 .navbar{
@@ -17,21 +31,13 @@
     margin-bottom: 0
   }
 
-  .container{
-    @extend %flex_layout;
 
-    .nav-links{
-      list-style-type: none;
-      display: flex;
-      flex-wrap: wrap;
-      margin-bottom: 0;
-
-      a {
-        text-decoration: none;
-      }
-      > li.nav-link:not(:last-child){
-        margin-right: $base-margin * 2;
-      }
+  .container-full{
+    @extend %nav-container;
+  }
+  @each $bp, $val in $breakpoints {
+    .container#{breakpoint-infix($bp)}{
+      @extend %nav-container;
     }
   }
 }

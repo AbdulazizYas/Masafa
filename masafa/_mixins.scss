@@ -11,3 +11,13 @@
     box-shadow: none;
     opacity: $disabled-opacity + ($disabled-opacity * .25);
 }
+
+// mixin for creating container
+@mixin create-container($gutter: 1.5rem){
+
+  width: 100%;
+  padding-left: calc($gutter * 0.5);
+  padding-right: calc($gutter * 0.5);
+  margin-left: auto;
+  margin-right: auto;
+}

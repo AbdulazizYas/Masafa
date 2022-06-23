@@ -52,6 +52,7 @@
       background-color: lighten($val, 10);
       border-color: lighten($val, 10)
     }
+
   }
 
   .btn-outline-#{$key}{
@@ -60,9 +61,19 @@
     border: $base-border-thickness solid $val;
     color: $val;
 
+    &:hover,&:active,&:focus{
+      color: white;
+    }
     &:hover{
       background-color: $val;
-      color: white;
+    }
+
+    &:active{
+      background-color: $val;
+    }
+
+    &:focus{
+      background-color: $val;
     }
   }
 

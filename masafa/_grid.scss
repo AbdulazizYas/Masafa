@@ -1,36 +1,8 @@
 @use "sass:math";
 
-$grid-columns: 12;
 
-$grid-gaps: (
-  "0": 0,
-  "1": 10px,
-  "2": 20px,
-  "3": 30px,
-  "4": 40px,
-);
-
-$container-max-widths: (
-  "sm": 540px,
-  "md": 720px,
-  "lg": 960px,
-  "xl": 1140px,
-  "xxl": 1320px
-);
-
-$flex-values: flex-start, flex-end, space-between, space-around, space-evenly, center;
 
 // -----base layout classes
-
-// mixin for creating container
-@mixin create-container($gutter: 1.5rem){
-
-  width: 100%;
-  padding-left: calc($gutter * 0.5);
-  padding-right: calc($gutter * 0.5);
-  margin-left: auto;
-  margin-right: auto;
-}
 
 .container-full,
 .container{
@@ -92,20 +64,6 @@ $flex-values: flex-start, flex-end, space-between, space-around, space-evenly, c
   }
 }
 
-
-// justify content classes
-@each $val in $flex-values{
-  .justify-#{$val}{
-    justify-content: $val;
-  }
-}
-
-// align items classes
-@each $val in $flex-values{
-  .align-#{$val}{
-    align-items: $val;
-  }
-}
 
 // col classes
 @include xs{

@@ -7,9 +7,10 @@
 
 .img-border{
   padding: $base-padding*0.5;
-  border-radius: $base-border-radius * .5;
+  //border-radius: $base-border-radius * .5;
   background-color: #fff;
-  border: $base-border-thickness solid $gray-300;
+  //border: $base-border-thickness solid $gray-300;
+  box-shadow: $base-box-shadow;
 }
 
 .figure {

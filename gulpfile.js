@@ -11,17 +11,17 @@ function buildStyles() {
       .pipe(sass())
       //.pipe(purgecss({ content: ["*.html"] }))
       .pipe(rename("masafa.css"))
-      .pipe(dest("css"))
+      .pipe(dest("dist"))
   );
 }
 
 function minifyCSS() {
-  return src("css/masafa.css")
+  return src("dist/masafa.css")
     .pipe(sourcemaps.init())
     .pipe(rename("masafa.min.css"))
     .pipe(clean())
     .pipe(sourcemaps.write("."))
-    .pipe(dest("css"));
+    .pipe(dest("dist"));
 }
 
 function watchTasks() {

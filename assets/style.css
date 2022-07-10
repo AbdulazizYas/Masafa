@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300&display=swap');
+
+*{
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  box-shadow: 2px 0 8px -2px rgba(0, 0, 0, .1);
+}
+
+/* Sidebar links */
+.sidebar ul{
+  list-style-type: none;
+  padding: 0;
+}
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color .2s ease-in-out;
+  border-radius: 5px;
+}
+.sidebar li{
+  padding: 10px;
+}
+.sidebar a:hover{
+  background-color: var(--masafa-warning-color);
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: var(--masafa-warning-color);
+}
+
+/* Links on mouse-over
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+} */
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
